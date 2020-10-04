@@ -13,10 +13,10 @@ config :ambue_spike,
 # Configures the endpoint
 config :ambue_spike, AmbueSpikeWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "4rfcaGewwytemjfpbSut/qsFB2ZsLguHUeS2LUW+TTI1feRYCt0Gidz7Eg33LnUZ",
+  secret_key_base: "CKBXdamc95it2VU9NLqAk7nJxrKXfRj/uYvfneEOUDeDKLTCjKefscfsYV91G6vp",
   render_errors: [view: AmbueSpikeWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: AmbueSpike.PubSub,
-  live_view: [signing_salt: "joivwf0f"]
+  live_view: [signing_salt: "ICcspd2p"]
 
 # Configures Elixir's Logger
 config :logger, :console,

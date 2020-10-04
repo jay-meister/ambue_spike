@@ -7,7 +7,7 @@ defmodule AmbueSpikeWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_ambue_spike_key",
-    signing_salt: "2pO/4qBL"
+    signing_salt: "ZZtbzYGT"
   ]
 
   socket "/socket", AmbueSpikeWeb.UserSocket,
