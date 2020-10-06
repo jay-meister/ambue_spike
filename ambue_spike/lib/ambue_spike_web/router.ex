@@ -17,6 +17,7 @@ defmodule AmbueSpikeWeb.Router do
   scope "/", AmbueSpikeWeb do
     pipe_through :browser
 
+    live "/", UserLive, :index
   end
 
   # Other scopes may use custom stacks.
