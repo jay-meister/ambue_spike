@@ -1,0 +1,13 @@
+<section>
+  <%= f = form_for @changeset, "#", [phx_change: :save] %>
+    <%= label f, :name %>
+    <%= text_input f, :name %>
+    <%= error_tag f, :name %>
+
+    <%= label f, :email %>
+    <%= text_input f, :email %>
+    <%= error_tag f, :email %>
+
+    <input name="session_id" type="hidden"  value=<%= @session_id %>>
+  </form>
+</section>
