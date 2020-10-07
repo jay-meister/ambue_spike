@@ -1,4 +1,4 @@
-<section class="phx-hero">
+<section>
   <%= f = form_for @changeset, "#", [phx_change: :save] %>
     <%= label f, :name %>
     <%= text_input f, :name %>
@@ -7,11 +7,7 @@
     <%= label f, :email %>
     <%= text_input f, :email %>
     <%= error_tag f, :email %>
-  </form>
-</section>
 
-<section>
-  <%= if assigns[:user] do %>
-    <div>Congrats! user created: <%= @user.name %>, <%= @user.email %></div>
-  <% end %>
+    <input name="session_id" type="hidden"  value=<%= @session_id %>>
+  </form>
 </section>

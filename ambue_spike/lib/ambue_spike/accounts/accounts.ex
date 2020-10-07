@@ -18,4 +18,8 @@ defmodule AmbueSpike.Accounts do
     User.changeset(%User{}, params)
     |> Repo.insert()
   end
+
+  def get_user(id) do
+    Repo.get(User, id)
+  end
 end

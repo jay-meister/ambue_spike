@@ -6,6 +6,8 @@ defmodule AmbueSpike.Application do
   use Application
 
   def start(_type, _args) do
+    :ets.new(:session_register, [:named_table, :set, :public])
+
     children = [
       # Start the Ecto repository
       AmbueSpike.Repo,

@@ -8,6 +8,26 @@ defmodule AmbueSpikeWeb.Router do
     plug :put_root_layout, {AmbueSpikeWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :put_random_session_id
+  end
+
+  @doc """
+  assign a session_id if one does not exist so we can locate returning users
+  """
+  def put_random_session_id(conn, _opts) do
+    case get_session(conn, :session_id) do
+      nil ->
+        session_id =
+          10
+          |> :crypto.strong_rand_bytes()
+          |> Base.url_encode64(padding: false)
+
+        conn
+        |> put_session(:session_id, session_id)
+
+      _id ->
+        conn
+    end
   end
 
   pipeline :api do
